@@ -18,9 +18,9 @@ setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
     await expect(page).not.toHaveURL(/\/login\/callback/);
 
     // Confirm that the authenticated application is available.
-    await expect(
-        page.getByTestId('sideBar').locator('[data-e2e="employees"]')
-    ).toBeVisible();
+    const employeesLink = page.getByTestId('sideBar').locator('[data-e2e="employees"]');   
+    await employeesLink.waitFor();    
+    await expect(employeesLink).toBeVisible();
 
     await page.context().storageState({ path: 'admin.json' });
 });
