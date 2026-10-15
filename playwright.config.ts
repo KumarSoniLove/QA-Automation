@@ -39,14 +39,20 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
 
-    {
-      name: 'setup',
-      testMatch: /auth\.setup\.ts/,
-    },
+      ...(process.env.CI ? [
+      {
+        name: 'setup',
+        testMatch: /auth\.setup\.ts/,
+        use: {
+          baseURL: process.env.BASE_URL,
+        },
+      }
+    ] : []),
 
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      // Chromium will only depend on setup on the cloud pipeline
       dependencies: process.env.CI ? ['setup'] : [],
     },
 

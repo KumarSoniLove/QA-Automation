@@ -1,7 +1,7 @@
 import { test as setup, expect } from '../base/pomFixture';
 
 setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
-     await page.goto('https://brighthr.com');
+     await page.goto('/');
     await page.waitForLoadState('networkidle');
     
     // 2. Perform your login action sequence
