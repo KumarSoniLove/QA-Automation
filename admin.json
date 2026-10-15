@@ -1,0 +1,163 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.1808791895.1792053513",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826613536.074997,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_X2RS2KH2W7",
+      "value": "GS2.1.s1792053512$o1$g1$t1792053535$j37$l0$h0",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826613535.098877,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "idsrv.session",
+      "value": "F173966091A289C0A2E69868066D9475",
+      "domain": "sandbox-login.brighthr.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "idsrv",
+      "value": "CfDJ8E6Qa2K3aqtBloQe5Z5irO9a79xHzPrw6tV4bxFjCg-nOzBqSjcsfiGJaNvztmRnKdzyvqjhY0XVNT7qL9B5_oRYYF_bRlPUE9XgbeCZl4jnxZLHg1OM4hNEUmutrnRm7iam_sNpTc_mzRyZ5SbIFqY271p31OQH7k68U1A-K1ouddfokZ4A1UU6FlnWBBJxAZBVnQVpiOocPg_nhLo60yxaoQ5pOUmbnI2mkgwCLnqDBg11A_ea1P9ahDmc9PbU08nPa5lac-7Ymzu_87Lks7ufijGKlQba0yHqzWjK7EeEJ9uC79gEIRimmHr9sKGlQzkTBhE04mkX6LDmlwrQ2_plr-MVnxw4b5cZVgi-YIPXpnNbru-2ybPkaIqojDnzWw87q_D9rn6epZF9rZkJ0jI8suvRmb1sZHmgDXjZu4JQ3M2vgTIXEe1LbKDMRC9icOFiv6Z5IKW0DHCFoMmh5hIdD5u2BFRfaCFn3zLYbAQbWIFmBLPoO8EP36QaC-XmvI7IjOyGaCGAihIMJIGTOLqpKoYO_pxsYG3nnz6_JEmGwHgtuCoWTTVY9ShI6UmPZkhFOOra9m6i3-28Io-JFF1fcBQFeX9ClwkTP22XeTQqCRTzLuNzP_Kq3SqsiZvwUNfWX2xcvXxYmyfhwi9HUTV5bO2Xl9s3ofj4VkZ0iSVaIvu56NaD0MR2lsICtNUrNZ76NzZ99cKz0DbimaoREy2DbacBJ9actFZuvl9yAX5Z5a5vO493ekfKYPA3fDPFAGkrpi8CrQz6368jmJq1NWc",
+      "domain": "sandbox-login.brighthr.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bright_has-logged-in",
+      "value": "true",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1823589536,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bhr_has-logged-in",
+      "value": "true",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1823589536,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_50B73T6JCW",
+      "value": "GS2.1.s1792053536$o1$g0$t1792053537$j59$l0$h0",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826613537.983384,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_hp5_event_props.2773805487",
+      "value": "%7B%7D",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826131138,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hp5_let.2773805487",
+      "value": "1792053538563",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826131138,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hp5_meta.2773805487",
+      "value": "%7B%22userId%22%3A%223425206941174559%22%2C%22sessionId%22%3A%225511980958372904%22%2C%22sessionProperties%22%3A%7B%22time%22%3A1792053538563%2C%22id%22%3A%225511980958372904%22%2C%22initial_pageview_info%22%3A%7B%22time%22%3A1792053538563%2C%22id%22%3A%228624214298735520%22%2C%22title%22%3A%22Dashboard%20-%20BrightHR%22%2C%22previous_page%22%3A%22%2Flogin%2Fcallback%22%2C%22url%22%3A%7B%22domain%22%3A%22sandbox-app.brighthr.com%22%2C%22path%22%3A%22%2Fdashboard%22%2C%22query%22%3A%22%22%2C%22hash%22%3A%22%22%7D%7D%2C%22search_keyword%22%3A%22%22%2C%22referrer%22%3A%22https%3A%2F%2Fsandbox-app.brighthr.com%2Flogin%2Fcallback%3Fcode%3DE1AAEF3CF1FDA32F9B2558C0041A365BAAFC3893E385C8F5B3E2DAB207C34DD0-1%26session_state%3DH8b-Cf7Nwy6dRIf3wMJAVWbuPVYY16bvloQeE_AhWpY.163B02FB97DDDCF0CDF86AA6F9EAC209%26iss%3Dhttps%253A%252F%252Fsandbox-login.brighthr.com%22%2C%22utm%22%3A%7B%22source%22%3A%22%22%2C%22medium%22%3A%22%22%2C%22term%22%3A%22%22%2C%22content%22%3A%22%22%2C%22campaign%22%3A%22%22%7D%7D%7D",
+      "domain": ".brighthr.com",
+      "path": "/",
+      "expires": 1826131138,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://sandbox-app.brighthr.com",
+      "localStorage": [
+        {
+          "name": "companyName",
+          "value": "\"{\\\"data\\\":\\\"QA automation\\\",\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "auth.refreshTokenExpiry",
+          "value": "\"{\\\"data\\\":1793353136211,\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "countryCode",
+          "value": "\"{\\\"data\\\":\\\"UK\\\",\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "companyGuid",
+          "value": "\"{\\\"data\\\":\\\"6715457b-9c04-4f6c-8a7a-ad998083f365\\\",\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "clientId",
+          "value": "brighthr-webapp"
+        },
+        {
+          "name": "sessionId",
+          "value": "840da00f-e613-40bb-9809-f00958a52716"
+        },
+        {
+          "name": "auth.refreshToken",
+          "value": "\"{\\\"data\\\":\\\"6CC63384FCFEA6650EBB3B5A8E5C134DC223DFC1786C7CAD4865975466CB76DB-1\\\",\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "dateRegisteredUtc",
+          "value": "\"{\\\"data\\\":1792053535,\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "pusherTransportTLS",
+          "value": "{\"timestamp\":1792053538418,\"transport\":\"ws\",\"latency\":83}"
+        },
+        {
+          "name": "locale",
+          "value": "\"{\\\"data\\\":\\\"en-gb\\\",\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "_hp5_network_buffer.2773805487",
+          "value": "{\"value\":\"[]\"}"
+        },
+        {
+          "name": "currentLoggedInUser",
+          "value": "\"{\\\"data\\\":{\\\"id\\\":786625,\\\"guid\\\":\\\"68c21d01-c6d5-4a2e-acfd-3680a054fa62\\\",\\\"email\\\":\\\"qaautomationtechtask@grr.la\\\",\\\"phone\\\":\\\"Not Specified\\\",\\\"packageType\\\":\\\"free\\\",\\\"firstname\\\":\\\"QA\\\",\\\"lastname\\\":\\\"automation\\\",\\\"fullName\\\":\\\"QA automation\\\",\\\"role\\\":2,\\\"profileImage\\\":null,\\\"isCompanyPointOfContact\\\":true},\\\"expiryTime\\\":null}\""
+        },
+        {
+          "name": "_hp5_retry_buffer.2773805487",
+          "value": "{\"value\":\"[]\"}"
+        }
+      ]
+    }
+  ]
+}

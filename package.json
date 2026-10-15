@@ -1,0 +1,34 @@
+{
+  "name": "qa-automation",
+  "version": "1.0.0",
+  "description": "We have a technical task that comprises two steps:",
+  "main": "index.js",
+  "scripts": {
+   "clean:results": "rimraf test-results",
+   "test": "npm run clean:results && npx playwright test",
+   "report:generate": "npx allure generate test-results/allure-results -o test-results/allure-report --clean",
+   "report:open": "npx allure open test-results/allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brighthr/QA-Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brighthr/QA-Automation/issues"
+  },
+  "homepage": "https://github.com/brighthr/QA-Automation#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.13.0",
+    "rimraf": "^6.1.3"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.7"
+  }
+}
