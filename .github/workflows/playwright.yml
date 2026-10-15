@@ -24,9 +24,10 @@ jobs:
       run: npx playwright install --with-deps
       
     - name: Run Playwright tests
-      # 🚀 Injects the correct sandbox variables and repository secrets securely into the CI machine environment
+      # Injects the correct sandbox variables and repository secrets securely into the CI machine environment
       env:
-        BASE_URL: https://sandbox-app.brighthr.com
+        # 🚀 FIXED: Points explicitly to the sandbox login form page, NOT the dashboard app host
+        BASE_URL: https://brighthr.com
         BRIGHTHR_EMAIL: ${{ secrets.BRIGHTHR_EMAIL }}
         BRIGHTHR_PASSWORD: ${{ secrets.BRIGHTHR_PASSWORD }}
       run: npx playwright test
