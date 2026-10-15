@@ -4,7 +4,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  # to enables the manual "Run workflow" button inside the GitHub UI
+  # Enables the manual "Run workflow" button inside the GitHub Actions UI
   workflow_dispatch: 
 
 jobs:
@@ -16,17 +16,26 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        
     - name: Install dependencies
       run: npm ci
+      
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      
     - name: Run Playwright tests
+      # 🚀 Injects the correct sandbox variables and repository secrets securely into the CI machine environment
+      env:
+        BASE_URL: https://sandbox-app.brighthr.com
+        BRIGHTHR_EMAIL: ${{ secrets.BRIGHTHR_EMAIL }}
+        BRIGHTHR_PASSWORD: ${{ secrets.BRIGHTHR_PASSWORD }}
       run: npx playwright test
+      
     - name: Upload Test Results Artifact
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: centralized-test-results
-        # to update the exact centralized folder path
+        # Routes directly to your centralized test reports and screenshot assets folder
         path: test-results/ 
         retention-days: 30
