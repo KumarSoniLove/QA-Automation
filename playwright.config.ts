@@ -23,39 +23,40 @@ export default defineConfig({
     ['dot'],
     ['allure-playwright', { resultsDir: 'test-results/allure-results' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {    
-    baseURL: 'https://sandbox-app.brighthr.com',
-    headless: process.env.CI ? true : false,
-    screenshot: 'on',
-    video: 'off',
-    launchOptions: {
-      slowMo: process.env.CI ? 0 : 1000,      
-      
-    },
-    trace: 'on-first-retry',
-    storageState: 'admin.json',
-  },
-
+  use: {
+  baseURL: process.env.APP_BASE_URL ?? 'https://sandbox-app.brighthr.com',
+  headless: !!process.env.CI,
+  screenshot: 'only-on-failure',
+  video: 'off',
+  trace: 'on-first-retry',
+},
   /* Configure projects for major browsers */
-  projects: [
-
-      ...(process.env.CI ? [
-      {
-        name: 'setup',
-        testMatch: /auth\.setup\.ts/,
-        use: {
-          baseURL: process.env.BASE_URL,
+ projects: [
+  ...(process.env.CI
+    ? [
+        {
+          name: 'setup',
+          testMatch: /auth\.setup\.ts/,
+          use: {
+            baseURL:
+              process.env.AUTH_BASE_URL ??
+              'https://sandbox-login.brighthr.com',
+            // Start the login setup with a clean browser session.
+            storageState: { cookies: [], origins: [] },
+          },
         },
-      }
-    ] : []),
+      ]
+    : []),
 
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      // Chromium will only depend on setup on the cloud pipeline
-      dependencies: process.env.CI ? ['setup'] : [],
+  {
+    name: 'chromium',
+    use: {
+      ...devices['Desktop Chrome'],
+      baseURL: process.env.APP_BASE_URL ?? 'https://sandbox-app.brighthr.com',
+      storageState: 'admin.json',
     },
-
+    dependencies: process.env.CI ? ['setup'] : [],
+  },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
