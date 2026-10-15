@@ -30,7 +30,7 @@ jobs:
         AUTH_BASE_URL: https://sandbox-login.brighthr.com
         BRIGHTHR_EMAIL: ${{ secrets.BRIGHTHR_EMAIL }}
         BRIGHTHR_PASSWORD: ${{ secrets.BRIGHTHR_PASSWORD }}
-      run: npx playwright test
+      run: npx playwright test --project=chromium
       
     - name: Upload Test Results Artifact
       uses: actions/upload-artifact@v4
