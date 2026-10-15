@@ -31,36 +31,36 @@ test.describe("Employee Page Test", () => {
         await expect(page.getByTitle('Employees')).toBeVisible();
     })
 
-    test("Add Two Employees Test and Verify", async ({ page, employeePage }) => {
+    test("Add Two Employees Test and Verify", async ({ page, employee }) => {
         //Navigate and add both employees
-        await employeePage.clickEmployeeTab();
+        await employee.clickEmployeeTab();
 
         //Add first employee record
-        await employeePage.clickAddEmployeeBtn();
-        await employeePage.addEmployeeDetails(firstEmployee);
-        await employeePage.saveNewEmployeeDetails();
+        await employee.clickAddEmployeeBtn();
+        await employee.addEmployeeDetails(firstEmployee);
+        await employee.saveNewEmployeeDetails();
 
         //Add second employee record
-        await employeePage.clickAddAnotherEmployeeBtn();
-        await employeePage.addEmployeeDetails(secondEmployee);
-        await employeePage.saveNewEmployeeDetails();
+        await employee.clickAddAnotherEmployeeBtn();
+        await employee.addEmployeeDetails(secondEmployee);
+        await employee.saveNewEmployeeDetails();
     
         // Close the modal after adding employees
-        await employeePage.closeEmployeeModal();
+        await employee.closeEmployeeModal();
 
         //Navigate to employee tab and verify
-        await employeePage.clickEmployeeTab(); 
+        await employee.clickEmployeeTab(); 
 
         //Construct full name strings for tracking and preventing duplication matching
         const firstFullName = `${firstEmployee.firstName} ${firstEmployee.lastName}`;
         const secondFullName = `${secondEmployee.firstName} ${secondEmployee.lastName}`;
 
         //Verify the first employee record visible
-        await employeePage.searchEmployee(firstEmployee.firstName);
+        await employee.searchEmployee(firstEmployee.firstName);
         await expect(page.getByText(firstFullName, { exact: true })).toBeVisible();
 
         //Verify the second employee record visible
-        await employeePage.searchEmployee(secondEmployee.firstName);
+        await employee.searchEmployee(secondEmployee.firstName);
         await expect(page.getByText(secondFullName, { exact: true })).toBeVisible();
 
     })

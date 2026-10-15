@@ -1,15 +1,15 @@
-import {test as baseTest} from "@playwright/test";
+import {test as base} from "@playwright/test";
 import LoginPage from "../pages/loginPage";
 import EmployeePage from "../pages/employeePage";
 
-type pages = {
-    loginPage: LoginPage;
-    employeePage: EmployeePage;
+type myFixtures = {
+    login: LoginPage;
+    employee: EmployeePage;
 };
 
-const testPages = baseTest.extend<pages>({
-    loginPage: async ({ page }, use) => await use(new LoginPage(page)),
-    employeePage: async ({ page }, use) => await use(new EmployeePage(page)),         
+const testPages = base.extend<myFixtures>({
+    login: async ({ page }, use) => await use(new LoginPage(page)),
+    employee: async ({ page }, use) => await use(new EmployeePage(page)),         
     });
 
 export const test = testPages;

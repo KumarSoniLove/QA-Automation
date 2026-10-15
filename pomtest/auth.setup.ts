@@ -1,6 +1,6 @@
 import { test as setup, expect } from '../base/pomFixture';
 
-setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
+setup('Authenticate CI/CD Environment', async ({ page, login }) => {
     const email = process.env.BRIGHTHR_EMAIL;
     const password = process.env.BRIGHTHR_PASSWORD;
 
@@ -12,7 +12,7 @@ setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
 
     await page.goto('/login/');
     await expect(page.locator('#username')).toBeVisible();
-    await loginPage.login(email, password);
+    await login.login(email, password);
 
     // Wait for the application to leave the authentication callback.
     await expect(page).not.toHaveURL(/\/login\/callback/);
