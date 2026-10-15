@@ -1,4 +1,3 @@
-
 import { test as setup, expect } from '../base/pomFixture';
 
 setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
@@ -13,13 +12,17 @@ setup('Authenticate CI/CD Environment', async ({ page, loginPage }) => {
 
   await page.goto('/login/');
 
-  // Verify that the expected login form is displayed before filling it.
   await expect(page.locator('#username')).toBeVisible();
 
   await loginPage.login(email, password);
 
-  // Replace this with the actual URL reached after a successful login.
-  await expect(page).toHaveURL(/employee-hub|dashboard/);
+  // Wait for the application to leave the authentication callback.
+  await expect(page).not.toHaveURL(/\/login\/callback/);
+
+  // Confirm that the authenticated application is available.
+  await expect(
+    page.getByTestId('sideBar').getByRole('link', { name: 'Employees' })
+  ).toBeVisible();
 
   await page.context().storageState({ path: 'admin.json' });
 });
